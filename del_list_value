@@ -1,0 +1,8 @@
+procs del {list value} {
+set index_i [lsearch $list $value]
+for {} {$index_i >= 0} {} {
+set list [lreplace $list $index_i $index_i]
+set index_i [lsearch $list $value]
+}
+return $list
+}
